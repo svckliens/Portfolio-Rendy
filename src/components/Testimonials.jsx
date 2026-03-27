@@ -12,10 +12,10 @@ const testimonials = [
         rating: 5,
     },
     {
-        name: 'Michael Chen',
-        role: 'Product Manager, DigitalCo',
+        name: 'Ekaprana Wijaya',
+        role: 'CEO of Lumintu Sejahtera Mandiri',
         avatar: '👨‍💻',
-        text: 'Exceptional talent! They built our complex web application from scratch with clean architecture and beautiful UI. Communication was smooth throughout the entire project.',
+        text: 'Dia adalah peserta magang di perusahaan saya, dia sangat kreatif dan memiliki sifat problem solver tinggi. Dia juga sangat aktif dalam kegiatan organisasi dan selalu berusaha untuk memberikan yang terbaik.',
         rating: 5,
     },
 ];
