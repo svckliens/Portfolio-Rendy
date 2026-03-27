@@ -1,0 +1,63 @@
+/* CustomCursor.css */
+body {
+    cursor: none;
+}
+
+a, button, input, textarea, .glass-card, [role="button"] {
+    cursor: none !important;
+}
+
+.custom-cursor-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-outline {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(124, 106, 239, 0.4);
+    background-color: rgba(124, 106, 239, 0.05);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    /* Soft trail effect */
+    transition: left 0.1s ease-out, top 0.1s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(2px);
+}
+
+/* Hover States on Interactive Elements */
+.custom-cursor-dot.hover {
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-secondary);
+    mix-blend-mode: normal;
+}
+
+.custom-cursor-outline.hover {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(244, 114, 182, 0.15);
+    border-color: rgba(244, 114, 182, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Ensure mobile devices behave normally */
+@media (max-width: 768px), (pointer: coarse) {
+    body, a, button, input, textarea, .glass-card, [role="button"] {
+        cursor: auto !important;
+    }
+    .custom-cursor-dot, 
+    .custom-cursor-outline {
+        display: none !important;
+    }
+}

@@ -1,0 +1,116 @@
+.skills__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.skills__category-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    padding-left: 4px;
+    position: relative;
+    display: inline-block;
+}
+
+.skills__category-title::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(124, 106, 239, 0.3);
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.skills__card {
+    padding: 24px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.skills__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.skills__icon {
+    font-size: 1.8rem;
+    display: flex;
+    transition: transform var(--transition-base);
+    filter: drop-shadow(0 0 6px currentColor);
+    animation: float-up-down 4s ease-in-out infinite;
+}
+
+.skills__card:hover .skills__icon {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 12px currentColor);
+}
+
+.skills__level {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    font-family: var(--font-heading);
+}
+
+.skills__name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.skills__bar {
+    width: 100%;
+    height: 6px;
+    background: var(--skill-bar-bg);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skills__bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.skills__bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: inherit;
+    box-shadow: 0 0 12px currentColor;
+}
+
+@media (max-width: 768px) {
+    .skills__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skills__card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
