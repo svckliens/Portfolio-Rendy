@@ -7,7 +7,7 @@ const projects = [
     {
         title: 'Kolaborasa Muda Website',
         category: 'Website',
-        description: 'Platform digital kolaborasi volunteer untuk inovasi sosial dan pemberdayaan.',
+        description: 'A digital platform for PT. Kolaborasa Muda Indonesia.',
         tags: ['React', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Cloudflare'],
         image: '/kolaborasamuda.png',
         color: '#0984e3',
@@ -17,7 +17,7 @@ const projects = [
     {
         title: 'Customer Churn Prediction Model',
         category: 'Data & AI',
-        description: 'Model Machine Learning & analisis data untuk mendeteksi kecenderungan pelanggan berhenti berlangganan pada perusahaan.',
+        description: 'A Machine Learning & data analysis model to detect the tendency of customers to unsubscribe from companies.',
         tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-Learn', 'Streamlit'],
         image: '/churn-predicition.png',
         color: '#e84393',
@@ -26,7 +26,7 @@ const projects = [
     {
         title: 'Dangerous Weapon Detection (YOLOv26n)',
         category: 'Data & AI',
-        description: 'Sistem deteksi objek senjata berbahaya real-time berbasis Computer Vision YOLOv26n yang diimplementasikan pada Hugging Face Spaces.',
+        description: 'Real-time weapon detection system based on Computer Vision YOLOv26n.',
         tags: ['YOLO', 'Computer Vision', 'PyTorch', 'Python', 'OpenCV', 'Hugging Face'],
         image: '/deteksi-senjata-berbahaya.jpeg',
         color: '#d63031',
@@ -35,7 +35,7 @@ const projects = [
     {
         title: 'Root Finding Numerical Calculator',
         category: 'Data & AI',
-        description: 'Kalkulator komputasi numerik berbasis metode Biseksi & Regula Falsi untuk penyelesaian akar persamaan matematis.',
+        description: 'A numerical computation calculator based on bisection & regula falsi methods for solving mathematical equations.',
         tags: ['Python', 'Numerical Computing', 'Bisection Method', 'Regula Falsi', 'Vercel'],
         image: '/root-finding-calculator.png',
         color: '#00cec9',
@@ -44,7 +44,7 @@ const projects = [
     {
         title: 'Mendaki Puncak Sejaya Landing Page',
         category: 'Website',
-        description: 'Landing page interaktif untuk CV Mendaki Puncak Sejaya.',
+        description: 'A modern landing page for CV Mendaki Puncak Sejaya.',
         tags: ['React', 'Next.js', 'Tailwind CSS', 'JavaScript'],
         image: '/mps.jpeg',
         color: '#6c5ce7',
@@ -54,7 +54,7 @@ const projects = [
     {
         title: 'Personal Portfolio Website',
         category: 'Website',
-        description: 'Website portofolio modern dengan efek glassmorphism, animasi interaktif, dan performa tinggi.',
+        description: 'A modern portfolio website with glassmorphism effects, interactive animations, and high performance.',
         tags: ['React', 'Vite', 'CSS Modules', 'JavaScript'],
         image: '/portfolio.png',
         color: '#00b894',

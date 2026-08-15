@@ -102,10 +102,14 @@
 .projects__card-category {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 8px;
+}
+
+[data-theme='dark'] .projects__card-category {
+    color: var(--accent-secondary);
 }
 
 .projects__card-title {
@@ -137,11 +141,15 @@
     padding: 4px 12px;
     font-size: 0.72rem;
     font-weight: 600;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     background: rgba(124, 106, 239, 0.08);
     border-radius: var(--radius-full);
     border: 1px solid rgba(124, 106, 239, 0.15);
     backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .projects__card-tag {
+    color: var(--accent-secondary);
 }
 
 .projects__card-links {
@@ -203,6 +211,9 @@
     padding: 0;
     animation: slide-in-bottom 0.4s ease;
     box-shadow: var(--shadow-lg), 0 0 60px rgba(124, 106, 239, 0.1);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
 }
 
 .projects__modal-close {
@@ -254,6 +265,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 12px;
+    color: var(--text-primary);
 }
 
 .projects__modal-desc {

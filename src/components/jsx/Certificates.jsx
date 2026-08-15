@@ -6,7 +6,7 @@ import '../css/Certificates.css';
 const certificatesData = [
     {
         id: 'ibm-ai-engineering',
-        title: 'IBM AI Engineering Specialization',
+        title: 'AI Engineering Specialization',
         issuer: 'IBM',
         year: '2026',
         category: 'AI & Data',
@@ -17,7 +17,7 @@ const certificatesData = [
     },
     {
         id: 'ibm-devops-software',
-        title: 'IBM DevOps and Software Engineering',
+        title: 'DevOps and Software Engineering Specialization',
         issuer: 'IBM',
         year: '2026',
         category: 'Software Engineering',
@@ -51,7 +51,7 @@ const certificatesData = [
     },
     {
         id: 'glocolis-2023',
-        title: 'Silver Medal Global Competition for Life Sciences 2023',
+        title: 'Silver Medal - Global Competition for Life Sciences 2023',
         issuer: 'Global Competition for Life Sciences',
         year: '2023',
         category: 'International Science Awards',
@@ -62,7 +62,7 @@ const certificatesData = [
     },
     {
         id: 'i2aspo-2022',
-        title: 'Silver Medal International Applied Science Project Olympiad 2022',
+        title: 'Silver Medal - International Applied Science Project Olympiad 2022',
         issuer: 'International Applied Science Project Olympiad',
         year: '2022',
         category: 'International Science Awards',
