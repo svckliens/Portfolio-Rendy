@@ -1,6 +1,6 @@
 .services {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .services__grid {

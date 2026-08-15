@@ -303,7 +303,7 @@ textarea {
 
 /* ===== Section Orbs — Colorful blobs behind glass cards ===== */
 .section {
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .section::before,
