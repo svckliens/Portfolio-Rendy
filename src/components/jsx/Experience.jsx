@@ -9,39 +9,11 @@ const experiences = [
         icon: <FiGlobe />,
         title: 'Junior Web Developer & Data Analyst',
         company: 'Freelance / Tech Projects',
-        period: '2025 - Present',
+        period: '2026 - Present',
         description:
             'Designing and engineering fullstack web applications, RESTful APIs, and implementing data analysis pipelines to empower business operations.',
-        tags: ['React.js', 'MongoDB', 'Python', 'Data Analytics', 'Machine Learning', 'SQL', 'REST API'],
+        tags: ['React.js', 'Laravel', 'MongoDB', 'Python', 'Data Analytics', 'Machine Learning', 'SQL', 'REST API', 'Firebase'],
         images: [],
-    },
-    {
-        type: 'leadership',
-        icon: <FiUsers />,
-        title: 'Chairman',
-        company: 'Himpunan Mahasiswa Teknik Informatika - UDINUS',
-        period: '2025 - 2026',
-        description:
-            'Leading the Informatics Engineering Student Association. Responsible for strategic planning, directing 20+ work programs, external relations, and fostering tech talent.',
-        tags: ['Leadership', 'Strategic Planning', 'Project Management', 'Public Speaking', 'Team Management'],
-        images: [
-            { src: '/about-1.jpg', caption: 'Program Kerja & Raker HMTI UDINUS' },
-            { src: '/about-2.jpg', caption: 'Foto Bersama Ketua Umum ORMAWA FIK UDINUS' },
-        ],
-    },
-    {
-        type: 'award',
-        icon: <FiAward />,
-        title: 'PPK Ormawa HMTI UDINUS 2025',
-        company: 'Kementerian Pendidikan & UDINUS',
-        period: '2025',
-        description:
-            'Spearheaded community empowerment initiatives helping local MSMEs and village digitalization, earning national recognition at Abdidaya Ormawa 2025.',
-        tags: ['Abdidaya Ormawa', 'Community Empowerment', 'Digitalization', 'Social Impact'],
-        images: [
-            { src: '/about-3.jpg', caption: 'Penghargaan Juara Abdidaya Ormawa 2025' },
-            { src: '/about-4.jpg', caption: 'Dokumentasi Tim GO-SMILE' },
-        ],
     },
     {
         type: 'work',
@@ -54,6 +26,35 @@ const experiences = [
         tags: ['React', 'JavaScript', 'Problem Solving', 'UI/UX Design'],
         images: [],
     },
+    {
+        type: 'leadership',
+        icon: <FiUsers />,
+        title: 'Chairman',
+        company: 'Himpunan Mahasiswa Teknik Informatika - UDINUS',
+        period: '2025 - 2026',
+        description:
+            'Leading the Informatics Engineering Student Association. Responsible for strategic planning, directing 20+ work programs, external relations, and fostering tech talent.',
+        tags: ['Leadership', 'Strategic Planning', 'Project Management', 'Public Speaking', 'Team Management'],
+        images: [
+            { src: '/about-1.jpg', caption: 'Work Programs of HMTI UDINUS' },
+            { src: '/about-2.jpg', caption: 'Board of Chairpersons of the Student Organization of the Faculty of Computer Science UDINUS' },
+        ],
+    },
+    {
+        type: 'award',
+        icon: <FiAward />,
+        title: 'PPK Ormawa HMTI UDINUS 2025',
+        company: 'KEMENDIKTI & UDINUS',
+        period: '2025',
+        description:
+            'Spearheaded community empowerment initiatives helping local MSMEs and village digitalization, earning national recognition at Abdidaya Ormawa 2025.',
+        tags: ['Abdidaya Ormawa', 'Community Empowerment', 'Digitalization', 'Social Impact'],
+        images: [
+            { src: '/about-3.jpg', caption: 'Abdidaya Ormawa Champion Award 2025' },
+            { src: '/about-4.jpg', caption: 'GO-SMILE Team Documentation' },
+        ],
+    },
+    
 ];
 
 export default function Experience() {
@@ -91,10 +92,10 @@ export default function Experience() {
         <section id="experience" className="section experience">
             <div className="container">
                 <div className="section-header reveal" ref={headerRef}>
-                    <span className="section-label">Professional Milestone</span>
-                    <h2 className="section-title">Experience & Journey</h2>
+                    <span className="section-label">Experience</span>
+                    <h2 className="section-title">Professional Milestone</h2>
                     <p className="section-subtitle">
-                        A detailed timeline of my professional work, internship experience, and organizational leadership
+                        A detailed timeline of my professional work, internship experience, and organizational experience.
                     </p>
                 </div>
 

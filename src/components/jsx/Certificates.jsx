@@ -5,9 +5,31 @@ import '../css/Certificates.css';
 
 const certificatesData = [
     {
+        id: 'ibm-ai-engineering',
+        title: 'IBM AI Engineering Specialization',
+        issuer: 'IBM',
+        year: '2026',
+        category: 'AI & Data',
+        image: '/certificate-3.png',
+        description:
+            'Professional certification from IBM AI Engineering obtained during my studies, covering Machine Learning, Deep Learning, PyTorch, Keras, and Neural Networks.',
+        skills: ['Machine Learning', 'Deep Learning', 'PyTorch', 'Computer Vision', 'Data Science'],
+    },
+    {
+        id: 'ibm-devops-software',
+        title: 'IBM DevOps and Software Engineering',
+        issuer: 'IBM',
+        year: '2026',
+        category: 'Software Engineering',
+        image: '/certificate-4.png',
+        description:
+            'Professional certification from IBM DevOps and Software Engineering obtained during my studies, covering CI/CD pipelines, Microservices, Cloud Native, and Agile Software Engineering.',
+        skills: ['DevOps', 'CI/CD', 'Software Architecture', 'Microservices', 'Agile & Git'],
+    },
+    {
         id: 'abdidaya-juara-1-2025',
-        title: 'Juara 1 Tim Pelaksana Paling Inovatif Abdidaya Ormawa 2025',
-        issuer: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi',
+        title: '1st Place for Most Innovative Project Team - Abdidaya Ormawa 2025',
+        issuer: 'Ministry of Education, Culture, Research, and Technology',
         year: '2025',
         category: 'National Awards',
         image: '/certificate-5.png',
@@ -17,8 +39,8 @@ const certificatesData = [
     },
     {
         id: 'abdidaya-peserta-2025',
-        title: 'Sertifikat Peserta & Finalis Abdidaya Ormawa 2025',
-        issuer: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi',
+        title: 'Participant & Finalist Certificate - Abdidaya Ormawa 2025',
+        issuer: 'Ministry of Education, Culture, Research, and Technology',
         year: '2025',
         category: 'National Awards',
         image: '/certificate-6.png',
@@ -28,48 +50,26 @@ const certificatesData = [
         skills: ['Abdidaya Ormawa', 'Community Service', 'Teamwork', 'Social Impact'],
     },
     {
-        id: 'i2aspo-2022',
-        title: 'Silver Medal I2ASPO 2022',
-        issuer: 'Indonesia International Applied Science Project Olympiad (I2ASPO)',
-        year: '2022',
-        category: 'International Science Awards',
-        image: '/certificate-1.png',
-        description:
-            'Penghargaan Silver Medal pada kompetisi karya ilmiah internasional I2ASPO 2022 sewaktu menempuh pendidikan di SMA N 1 Semarang.',
-        skills: ['Scientific Research', 'Applied Science', 'Innovation', 'International Competition'],
-    },
-    {
         id: 'glocolis-2023',
-        title: 'Silver Medal GloCoLIS 2023',
-        issuer: 'Global Competition for Life Sciences (GloCoLIS)',
+        title: 'Silver Medal Global Competition for Life Sciences 2023',
+        issuer: 'Global Competition for Life Sciences',
         year: '2023',
         category: 'International Science Awards',
         image: '/certificate-2.png',
         description:
-            'Penghargaan Silver Medal pada kompetisi karya ilmiah internasional GloCoLIS 2023 sewaktu menempuh pendidikan di SMA N 1 Semarang.',
+            'Silver Medal award at the international life sciences competition GloCoLIS 2023 in the life sciences category.',
         skills: ['Life Sciences Research', 'Analytical Thinking', 'Scientific Writing', 'Presentation'],
     },
     {
-        id: 'ibm-ai-engineering',
-        title: 'IBM AI Engineering Specialization',
-        issuer: 'IBM',
-        year: '2024',
-        category: 'AI & Data',
-        image: '/certificate-3.png',
+        id: 'i2aspo-2022',
+        title: 'Silver Medal International Applied Science Project Olympiad 2022',
+        issuer: 'International Applied Science Project Olympiad',
+        year: '2022',
+        category: 'International Science Awards',
+        image: '/certificate-1.png',
         description:
-            'Sertifikasi profesional IBM AI Engineering yang diperoleh sewaktu perkuliahan, mencakup Machine Learning, Deep Learning, PyTorch, Keras, dan Neural Networks.',
-        skills: ['Machine Learning', 'Deep Learning', 'PyTorch', 'Computer Vision', 'Data Science'],
-    },
-    {
-        id: 'ibm-devops-software',
-        title: 'IBM DevOps and Software Engineering',
-        issuer: 'IBM',
-        year: '2024',
-        category: 'Software Engineering',
-        image: '/certificate-4.png',
-        description:
-            'Sertifikasi profesional IBM DevOps and Software Engineering yang diperoleh sewaktu perkuliahan, mencakup CI/CD pipelines, Microservices, Cloud Native, dan Agile Software Engineering.',
-        skills: ['DevOps', 'CI/CD', 'Software Architecture', 'Microservices', 'Agile & Git'],
+            'Silver Medal award at the international scientific work competition I2ASPO 2022 in the functional food category.',
+        skills: ['Scientific Research', 'Applied Science', 'Innovation', 'International Competition'],
     },
 ];
 
@@ -92,10 +92,10 @@ export default function Certificates() {
         <section id="certificates" className="section certificates">
             <div className="container">
                 <div className="section-header reveal" ref={headerRef}>
-                    <span className="section-label">Honors & Credentials</span>
-                    <h2 className="section-title">Certificates & Achievements</h2>
+                    <span className="section-label">Certificates & Achievements</span>
+                    <h2 className="section-title">Honors & Credentials</h2>
                     <p className="section-subtitle">
-                        Recognitions, national & international science awards, and professional IBM engineering certifications
+                        Recognitions, national & international science awards, and professional engineering certifications
                     </p>
                 </div>
 

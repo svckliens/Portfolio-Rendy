@@ -4,8 +4,8 @@ import '../css/Education.css';
 
 const educationList = [
     {
-        degree: 'S1 Teknik Informatika (B.S. in Informatics Engineering)',
-        institution: 'Universitas Dian Nuswantoro (UDINUS)',
+        degree: 'Bachelor of Informatics Engineering',
+        institution: 'Dian Nuswantoro University',
         location: 'Semarang, Indonesia',
         period: '2023 - Present',
         status: 'Active Student',
@@ -16,12 +16,12 @@ const educationList = [
             'Active in Community Empowerment & Business Digitalization Programs',
             'Selected to represent HMTI UDINUS in PPK ORMAWA 2025',
             'Scholarship Recipient of Abdidaya Ormawa (2025-2027)',
-            'Core Courses: Web Engineering, Data Science, Machine Learning, Database Systems',
+            'Core Courses: DevOps, Software Engineering, Data Science, Machine Learning, Artificial Intelligence ',
         ],
         icon: <FiBookOpen />,
     },
     {
-        degree: 'Science (MIPA)',
+        degree: 'MIPA (Mathematics and Natural Sciences)',
         institution: 'SMA Negeri 1 Semarang',
         location: 'Semarang, Indonesia',
         period: '2020 - 2023',
@@ -30,7 +30,7 @@ const educationList = [
             'Pre-university science program building rigorous analytical skills, mathematics proficiency, and foundational logic.',
         highlights: [
             'Strong foundation in Advanced Mathematics and Physics',
-            'Active participation in student organizations and tech events',
+            'Active participation in student organizations',
             'Graduated with strong academic distinction',
         ],
         icon: <FiAward />,
@@ -45,8 +45,8 @@ export default function Education() {
         <section id="education" className="section education">
             <div className="container">
                 <div className="section-header reveal" ref={headerRef}>
-                    <span className="section-label">Academic Background</span>
-                    <h2 className="section-title">Education & Credentials</h2>
+                    <span className="section-label">Education</span>
+                    <h2 className="section-title">Academic Background</h2>
                     <p className="section-subtitle">
                         My formal academic journey and educational foundation in technology and sciences
                     </p>

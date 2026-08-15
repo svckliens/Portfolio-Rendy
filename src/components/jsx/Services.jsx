@@ -53,6 +53,7 @@ const techSkills = [
     { name: 'Git', icon: <SiGit />, color: '#F05032' },
     { name: 'Figma', icon: <SiFigma />, color: '#F24E1E' },
     { name: 'Canva', icon: <SiCanva />, color: '#00C4CC' },
+    { name: 'Claude', icon: <SiClaude />, color: '#00C4CC' },
 ];
 
 export default function Services() {
