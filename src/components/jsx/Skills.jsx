@@ -3,7 +3,6 @@ import {
     SiReact, SiJavascript, SiNodedotjs, SiPython,
     SiHtml5, SiPhp, SiMongodb, SiMysql,
     SiGit, SiFigma, SiCanva, SiLaravel,
-    SiClaude,
 } from 'react-icons/si';
 import '../css/Skills.css';
 
@@ -20,7 +19,6 @@ const allSkills = [
     { name: 'Git', icon: <SiGit />, color: '#F05032' },
     { name: 'Figma', icon: <SiFigma />, color: '#F24E1E' },
     { name: 'Canva', icon: <SiCanva />, color: '#00C4CC' },
-    { name: 'Claude', icon: <SiClaude />, color: '#F05032' },
 ];
 
 const skillCategories = [
