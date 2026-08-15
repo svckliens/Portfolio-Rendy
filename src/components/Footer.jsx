@@ -4,7 +4,9 @@ import './Footer.css';
 const quickLinks = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Services', href: '#services' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Certificates', href: '#certificates' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
 ];
@@ -26,10 +28,10 @@ export default function Footer() {
                             Building digital experiences with passion and precision. Let's create something amazing together.
                         </p>
                         <div className="footer__socials">
-                            <a href="https://github.com/svkcliens" target="_blank" rel="noreferrer" className="footer__social-link" aria-label="GitHub">
+                            <a href="https://github.com/svckliens" target="_blank" rel="noreferrer" className="footer__social-link" aria-label="GitHub">
                                 <FiGithub size={18} />
                             </a>
-                            <a href="https://linkedin.com/in/svkcliens" target="_blank" rel="noreferrer" className="footer__social-link" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/in/svcklliens" target="_blank" rel="noreferrer" className="footer__social-link" aria-label="LinkedIn">
                                 <FiLinkedin size={18} />
                             </a>
                             <a href="https://instagram.com/rendystywn_" target="_blank" rel="noreferrer" className="footer__social-link" aria-label="Instagram">
@@ -52,11 +54,11 @@ export default function Footer() {
                     <div className="footer__newsletter">
                         <h4 className="footer__heading">Stay Connected</h4>
                         <p className="footer__newsletter-text">
-                            Get updates on my latest projects and blog posts.
+                            Get updates on my latest projects and digital insights.
                         </p>
                         <div className="footer__newsletter-form">
                             <input type="email" placeholder="Your email" className="footer__newsletter-input" />
-                            <button className="footer__newsletter-btn">→</button>
+                            <button className="footer__newsletter-btn" aria-label="Subscribe">→</button>
                         </div>
                     </div>
                 </div>

@@ -6,10 +6,11 @@ import './Navbar.css';
 const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Services', href: '#services' },
     { label: 'Experience', href: '#experience' },
+    { label: 'Education', href: '#education' },
+    { label: 'Certificates', href: '#certificates' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Testimonials', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },
 ];
 
@@ -46,7 +47,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
             <div className="navbar__container container">
                 <a href="#home" className="navbar__logo" onClick={(e) => handleNavClick(e, '#home')}>
-                    <span className="navbar__logo-text">Rendy Setyawan</span>
+                    <span className="navbar__logo-text">Rendy's Portfolio</span>
                 </a>
 
                 <div className={`navbar__menu ${mobileOpen ? 'navbar__menu--open' : ''}`}>

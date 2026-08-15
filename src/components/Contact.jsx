@@ -19,32 +19,51 @@ export default function Contact() {
         setStatus('sending');
 
         try {
-            const formDataToSubmit = {
-                ...formData,
-                access_key: "1fa9f69f-3709-4ce2-8c1a-b3f7d9ad49d6"
-            };
-
-            const response = await fetch("https://api.web3forms.com/submit", {
+            // Direct submission to adityarendys2704@gmail.com using FormSubmit API
+            const response = await fetch("https://formsubmit.co/ajax/adityarendys2704@gmail.com", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json"
                 },
-                body: JSON.stringify(formDataToSubmit)
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    _subject: formData.subject ? `[Portfolio] ${formData.subject}` : 'New Message from Portfolio Website',
+                    message: formData.message,
+                })
             });
 
             const result = await response.json();
-            if (result.success) {
+            if (response.ok || result.success === "true" || result.success === true) {
                 setStatus('sent');
                 setFormData({ name: '', email: '', subject: '', message: '' });
             } else {
-                setStatus('error');
+                // Fallback to Web3Forms API
+                const fallbackRes = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: JSON.stringify({
+                        ...formData,
+                        access_key: "1fa9f69f-3709-4ce2-8c1a-b3f7d9ad49d6"
+                    })
+                });
+                const fallbackResult = await fallbackRes.json();
+                if (fallbackResult.success) {
+                    setStatus('sent');
+                    setFormData({ name: '', email: '', subject: '', message: '' });
+                } else {
+                    setStatus('error');
+                }
             }
         } catch (error) {
             setStatus('error');
         }
 
-        setTimeout(() => setStatus(''), 5000);
+        setTimeout(() => setStatus(''), 6000);
     };
 
     return (
@@ -73,7 +92,11 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <span className="contact__detail-label">Email</span>
-                                    <span className="contact__detail-value">adityarendys2704@gmail.com</span>
+                                    <span className="contact__detail-value">
+                                        <a href="mailto:adityarendys2704@gmail.com" style={{ color: 'inherit' }}>
+                                            adityarendys2704@gmail.com
+                                        </a>
+                                    </span>
                                 </div>
                             </div>
                             <div className="contact__detail">
@@ -97,10 +120,10 @@ export default function Contact() {
                         </div>
 
                         <div className="contact__socials">
-                            <a href="https://github.com/svkcliens" target="_blank" rel="noreferrer" className="contact__social-link" aria-label="GitHub">
+                            <a href="https://github.com/svckliens" target="_blank" rel="noreferrer" className="contact__social-link" aria-label="GitHub">
                                 <FiGithub size={20} />
                             </a>
-                            <a href="https://linkedin.com/in/svkcliens" target="_blank" rel="noreferrer" className="contact__social-link" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/in/svcklliens" target="_blank" rel="noreferrer" className="contact__social-link" aria-label="LinkedIn">
                                 <FiLinkedin size={20} />
                             </a>
                             <a href="https://instagram.com/rendystywn_" target="_blank" rel="noreferrer" className="contact__social-link" aria-label="Instagram">
@@ -166,12 +189,12 @@ export default function Contact() {
                         </button>
                         {status === 'sent' && (
                             <div className="contact__success">
-                                ✅ Message sent successfully! I'll get back to you soon.
+                                ✅ Message sent successfully to adityarendys2704@gmail.com! I'll get back to you soon.
                             </div>
                         )}
                         {status === 'error' && (
                             <div className="contact__error" style={{ color: '#ef4444', marginTop: '12px', fontSize: '0.9rem' }}>
-                                ❌ Failed to send message. Please check your Access Key or try again later.
+                                ❌ Failed to send message. Please try sending directly to adityarendys2704@gmail.com.
                             </div>
                         )}
                     </form>

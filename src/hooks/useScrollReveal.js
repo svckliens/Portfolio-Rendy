@@ -30,7 +30,7 @@ export function useScrollReveal(options = {}) {
     return ref;
 }
 
-export function useMultiScrollReveal(count, options = {}) {
+export function useMultiScrollReveal(count, activeFilter = null, options = {}) {
     const refs = useRef([]);
 
     useEffect(() => {
@@ -50,11 +50,18 @@ export function useMultiScrollReveal(count, options = {}) {
         );
 
         refs.current.forEach((el) => {
-            if (el) observer.observe(el);
+            if (el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight + 100 && rect.bottom >= -100) {
+                    el.classList.add('revealed');
+                } else {
+                    observer.observe(el);
+                }
+            }
         });
 
         return () => observer.disconnect();
-    }, [count, options.threshold, options.rootMargin]);
+    }, [count, activeFilter, options.threshold, options.rootMargin]);
 
     return (index) => (el) => {
         refs.current[index] = el;

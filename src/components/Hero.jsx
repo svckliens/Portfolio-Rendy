@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FiGithub, FiLinkedin, FiInstagram, FiDownload, FiArrowRight } from 'react-icons/fi';
 import './Hero.css';
 
-const roles = ['Web Developer', 'Data Analist', 'Critical Thinker', 'Problem Solver', 'Tech Enthusiast'];
+const roles = ['Fullstack Web Developer', 'Data Analyst', 'AI Enthusiast', 'HMTI Chairman', 'Problem Solver'];
 
 export default function Hero() {
     const [roleIndex, setRoleIndex] = useState(0);
@@ -41,11 +41,6 @@ export default function Hero() {
 
             <div className="hero__container container">
                 <div className="hero__content hero-animate">
-                    <div className="hero__badge">
-                        <span className="hero__badge-dot" />
-                        Available for opportunities
-                    </div>
-
                     <h1 className="hero__title">
                         Hi, I'm <span className="gradient-text">Rendy Setyawan</span>
                     </h1>
@@ -73,7 +68,7 @@ export default function Hero() {
                         <a href="https://github.com/svckliens" target="_blank" rel="noreferrer" className="hero__social-link" aria-label="GitHub">
                             <FiGithub size={20} />
                         </a>
-                        <a href="https://linkedin.com/in/svckliens" target="_blank" rel="noreferrer" className="hero__social-link" aria-label="LinkedIn">
+                        <a href="https://linkedin.com/in/svcklliens" target="_blank" rel="noreferrer" className="hero__social-link" aria-label="LinkedIn">
                             <FiLinkedin size={20} />
                         </a>
                         <a href="https://instagram.com/rendystywn_" target="_blank" rel="noreferrer" className="hero__social-link" aria-label="Instagram">
@@ -99,9 +94,6 @@ export default function Hero() {
                                 <span>YN</span>
                             </div>
                         </div>
-                        <div className="hero__floating-badge hero__floating-badge--1">🔥 Laravel</div>
-                        <div className="hero__floating-badge hero__floating-badge--2">🐘 PHP</div>
-                        <div className="hero__floating-badge hero__floating-badge--3">🚀 Fast</div>
                     </div>
                 </div>
             </div>

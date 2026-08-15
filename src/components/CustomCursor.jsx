@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './CustomCursor.css';
 
 export default function CustomCursor() {
-    const [position, setPosition] = useState({ x: -100, y: -100 });
+    const dotRef = useRef(null);
+    const outlineRef = useRef(null);
     const [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
@@ -11,12 +12,19 @@ export default function CustomCursor() {
             isTouchDevice = true;
         }
 
-        if (isTouchDevice) return; // Don't run on mobile/touch
+        if (isTouchDevice) {
+            // Hide cursors if it's a touch device
+            if (dotRef.current) dotRef.current.style.display = 'none';
+            if (outlineRef.current) outlineRef.current.style.display = 'none';
+            return;
+        }
 
         const moveCursor = (e) => {
-            // Use requestAnimationFrame for smoother following
             requestAnimationFrame(() => {
-                setPosition({ x: e.clientX, y: e.clientY });
+                if (dotRef.current && outlineRef.current) {
+                    dotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+                    outlineRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+                }
             });
         };
 
@@ -45,21 +53,20 @@ export default function CustomCursor() {
         };
     }, []);
 
-    // Don't render on server or initial mount if coords are -100
-    if (position.x === -100 && position.y === -100) return null;
-
     return (
         <>
             <div 
+                ref={dotRef}
                 className={`custom-cursor-dot ${isHovering ? 'hover' : ''}`}
-                style={{ left: `${position.x}px`, top: `${position.y}px` }}
+                style={{ left: 0, top: 0, transform: 'translate3d(-100px, -100px, 0)' }}
             />
             <div 
+                ref={outlineRef}
                 className={`custom-cursor-outline ${isHovering ? 'hover' : ''}`}
                 style={{ 
-                    left: `${position.x}px`, 
-                    top: `${position.y}px`,
-                    // Add a tiny delay to the outline for physical drag effect
+                    left: 0, 
+                    top: 0,
+                    transform: 'translate3d(-100px, -100px, 0)',
                     transition: 'width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s'
                 }}
             />

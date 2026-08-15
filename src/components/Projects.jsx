@@ -5,38 +5,76 @@ import './Projects.css';
 
 const projects = [
     {
-        title: 'Mendaki Puncak Sejaya Landing Page',
-        category: 'Web',
-        description: 'Landing page for Mendaki Puncak Sejaya CV.',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        image: '/mps.jpeg',
-        color: '#6c5ce7',
-        github: 'https://github.com',
-        demo: 'https://example.com',
+        title: 'Kolaborasa Muda Website',
+        category: 'Website',
+        description: 'Platform digital kolaborasi volunteer untuk inovasi sosial dan pemberdayaan.',
+        tags: ['React', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Cloudflare'],
+        image: '/kolaborasamuda.png',
+        color: '#0984e3',
+        github: 'https://github.com/svckliens/kolaborasa-project',
+        demo: 'https://kolaborasamuda.id',
     },
     {
-        title: 'Portfolio Website',
-        category: 'Web',
-        description: 'Portfolio website for myself.',
-        tags: ['React', 'Tailwind CSS', 'JavaScript'],
+        title: 'Customer Churn Prediction Model',
+        category: 'Data & AI',
+        description: 'Model Machine Learning & analisis data untuk mendeteksi kecenderungan pelanggan berhenti berlangganan pada perusahaan.',
+        tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-Learn', 'Streamlit'],
+        image: '/churn-predicition.png',
+        color: '#e84393',
+        demo: 'https://customer-churn-predicition-rendysetyawan.streamlit.app/',
+    },
+    {
+        title: 'Dangerous Weapon Detection (YOLOv26n)',
+        category: 'Data & AI',
+        description: 'Sistem deteksi objek senjata berbahaya real-time berbasis Computer Vision YOLOv26n yang diimplementasikan pada Hugging Face Spaces.',
+        tags: ['YOLO', 'Computer Vision', 'PyTorch', 'Python', 'OpenCV', 'Hugging Face'],
+        image: '/deteksi-senjata-berbahaya.jpeg',
+        color: '#d63031',
+        demo: 'https://huggingface.co/spaces/Bilqiisnabilaa/Gun-and-Knife-Detector',
+    },
+    {
+        title: 'Root Finding Numerical Calculator',
+        category: 'Data & AI',
+        description: 'Kalkulator komputasi numerik berbasis metode Biseksi & Regula Falsi untuk penyelesaian akar persamaan matematis.',
+        tags: ['Python', 'Numerical Computing', 'Bisection Method', 'Regula Falsi', 'Vercel'],
+        image: '/root-finding-calculator.png',
+        color: '#00cec9',
+        demo: 'https://numerical-root-calculator.vercel.app/',
+    },
+    {
+        title: 'Mendaki Puncak Sejaya Landing Page',
+        category: 'Website',
+        description: 'Landing page interaktif untuk CV Mendaki Puncak Sejaya.',
+        tags: ['React', 'Next.js', 'Tailwind CSS', 'JavaScript'],
+        image: '/mps.jpeg',
+        color: '#6c5ce7',
+        github: 'https://github.com/svckliens/Mendaki-Puncak-Sejaya-Landing-Page',
+        demo: 'https://mendaki-puncak-sejaya-landing-page.vercel.app/',
+    },
+    {
+        title: 'Personal Portfolio Website',
+        category: 'Website',
+        description: 'Website portofolio modern dengan efek glassmorphism, animasi interaktif, dan performa tinggi.',
+        tags: ['React', 'Vite', 'CSS Modules', 'JavaScript'],
         image: '/portfolio.png',
         color: '#00b894',
-        github: 'https://github.com',
-        demo: 'https://example.com',
+        github: 'https://github.com/svckliens/Portfolio-Rendy',
+        demo: '#home',
     },
 ];
 
-const categories = ['All', 'Website', 'Machine Learning'];
+const categories = ['All', 'Website', 'Data & AI'];
 
 export default function Projects() {
     const [activeCategory, setActiveCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
     const headerRef = useScrollReveal();
-    const setRef = useMultiScrollReveal(projects.length);
 
     const filtered = activeCategory === 'All'
         ? projects
         : projects.filter((p) => p.category === activeCategory);
+
+    const setRef = useMultiScrollReveal(filtered.length, activeCategory);
 
     return (
         <section id="projects" className="section projects">
@@ -45,7 +83,7 @@ export default function Projects() {
                     <span className="section-label">Projects</span>
                     <h2 className="section-title">Featured Work</h2>
                     <p className="section-subtitle">
-                        A showcase of projects that demonstrate my skills and passion for development
+                        A showcase of real-world applications, digital platforms, and data science / AI models I've engineered
                     </p>
                 </div>
 
@@ -71,7 +109,7 @@ export default function Projects() {
                         >
                             <div className="projects__card-image" style={{ background: `linear-gradient(135deg, ${project.color}22, ${project.color}44)` }}>
                                 {project.image.includes('.') ? (
-                                    <img src={project.image} alt={project.title} className="projects__card-img" />
+                                    <img src={project.image} alt={project.title} loading="lazy" className="projects__card-img" />
                                 ) : (
                                     <span className="projects__card-emoji">{project.image}</span>
                                 )}
@@ -89,12 +127,16 @@ export default function Projects() {
                                     ))}
                                 </div>
                                 <div className="projects__card-links">
-                                    <a href={project.github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="GitHub">
-                                        <FiGithub size={18} />
-                                    </a>
-                                    <a href={project.demo} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Live Demo">
-                                        <FiExternalLink size={18} />
-                                    </a>
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="GitHub">
+                                            <FiGithub size={18} />
+                                        </a>
+                                    )}
+                                    {project.demo && (
+                                        <a href={project.demo} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Live Demo">
+                                            <FiExternalLink size={18} />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -110,7 +152,7 @@ export default function Projects() {
                             </button>
                             <div className="projects__modal-image" style={{ background: `linear-gradient(135deg, ${selectedProject.color}22, ${selectedProject.color}44)` }}>
                                 {selectedProject.image.includes('.') ? (
-                                    <img src={selectedProject.image} alt={selectedProject.title} className="projects__modal-img" />
+                                    <img src={selectedProject.image} alt={selectedProject.title} loading="lazy" className="projects__modal-img" />
                                 ) : (
                                     <span className="projects__modal-emoji">{selectedProject.image}</span>
                                 )}
@@ -125,12 +167,16 @@ export default function Projects() {
                                     ))}
                                 </div>
                                 <div className="projects__modal-actions">
-                                    <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn btn-outline">
-                                        <FiGithub /> GitHub
-                                    </a>
-                                    <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn btn-primary">
-                                        <FiExternalLink /> Live Demo
-                                    </a>
+                                    {selectedProject.github && (
+                                        <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn btn-outline">
+                                            <FiGithub /> GitHub
+                                        </a>
+                                    )}
+                                    {selectedProject.demo && (
+                                        <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn btn-primary">
+                                            <FiExternalLink /> Live Demo
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,102 @@
+/* ===== Marquee Infinite Loop ===== */
+.skills__marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 48px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skills__marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee-scroll 35s linear infinite;
+}
+
+.skills__marquee-track--reverse {
+    animation: marquee-scroll-reverse 35s linear infinite;
+}
+
+.skills__marquee-wrapper:hover .skills__marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+@keyframes marquee-scroll-reverse {
+    0% {
+        transform: translateX(calc(-100% / 3));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Marquee Pills */
+.skills__pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-glass);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    white-space: nowrap;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.skills__pill:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.skills__pill-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 0 6px currentColor);
+}
+
+.skills__pill-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Edge Fades */
+.skills__marquee-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.skills__marquee-fade--left {
+    left: 0;
+    background: linear-gradient(90deg, var(--bg-main, #090d16) 0%, transparent 100%);
+}
+
+.skills__marquee-fade--right {
+    right: 0;
+    background: linear-gradient(-90deg, var(--bg-main, #090d16) 0%, transparent 100%);
+}
+
+/* ===== Categories Breakdown ===== */
 .skills__categories {
     display: flex;
     flex-direction: column;
