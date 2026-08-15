@@ -1,7 +1,7 @@
-import { useScrollReveal, useMultiScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiBriefcase, FiUsers, FiAward, FiGlobe, FiImage } from 'react-icons/fi';
 import { useEffect, useState, useRef } from 'react';
-import './Experience.css';
+import '../css/Experience.css';
 
 const experiences = [
     {
@@ -176,3 +176,4 @@ export default function Experience() {
         </section>
     );
 }
+

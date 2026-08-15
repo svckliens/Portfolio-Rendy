@@ -1,11 +1,11 @@
-import { useScrollReveal, useMultiScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiCode, FiBarChart2, FiUsers, FiCheckCircle } from 'react-icons/fi';
 import {
     SiReact, SiJavascript, SiNodedotjs, SiPython,
     SiHtml5, SiPhp, SiMongodb, SiMysql,
     SiGit, SiFigma, SiCanva, SiLaravel,
 } from 'react-icons/si';
-import './Services.css';
+import '../css/Services.css';
 
 const services = [
     {
@@ -126,3 +126,4 @@ export default function Services() {
         </section>
     );
 }
+

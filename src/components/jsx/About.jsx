@@ -1,7 +1,7 @@
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { FiCode, FiBriefcase, FiAward, FiUsers } from 'react-icons/fi';
 import { useState, useEffect, useRef } from 'react';
-import './About.css';
+import '../css/About.css';
 
 const CountUp = ({ end, suffix }) => {
     const [count, setCount] = useState(0);
@@ -94,3 +94,4 @@ export default function About() {
         </section>
     );
 }
+

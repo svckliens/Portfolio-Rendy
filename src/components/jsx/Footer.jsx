@@ -1,5 +1,5 @@
 import { FiGithub, FiLinkedin, FiInstagram, FiHeart, FiArrowUp } from 'react-icons/fi';
-import './Footer.css';
+import '../css/Footer.css';
 
 const quickLinks = [
     { label: 'Home', href: '#home' },
@@ -75,3 +75,4 @@ export default function Footer() {
         </footer>
     );
 }
+

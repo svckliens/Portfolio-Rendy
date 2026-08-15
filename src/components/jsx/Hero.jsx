@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FiGithub, FiLinkedin, FiInstagram, FiDownload, FiArrowRight } from 'react-icons/fi';
-import './Hero.css';
+import '../css/Hero.css';
 
 const roles = ['Fullstack Web Developer', 'Data Analyst', 'AI Enthusiast', 'HMTI Chairman', 'Problem Solver'];
 
@@ -107,3 +107,4 @@ export default function Hero() {
         </section>
     );
 }
+

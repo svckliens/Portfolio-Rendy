@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useScrollReveal, useMultiScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiGithub, FiExternalLink, FiX } from 'react-icons/fi';
-import './Projects.css';
+import '../css/Projects.css';
 
 const projects = [
     {
@@ -186,3 +186,4 @@ export default function Projects() {
         </section>
     );
 }
+

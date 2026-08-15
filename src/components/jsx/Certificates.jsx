@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useScrollReveal, useMultiScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiAward, FiExternalLink, FiX, FiCheckCircle, FiCalendar } from 'react-icons/fi';
-import './Certificates.css';
+import '../css/Certificates.css';
 
 const certificatesData = [
     {
@@ -255,3 +255,4 @@ export default function Certificates() {
         </section>
     );
 }
+

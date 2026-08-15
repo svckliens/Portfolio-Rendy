@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import './CustomCursor.css';
+import '../css/CustomCursor.css';
 
 export default function CustomCursor() {
     const dotRef = useRef(null);
@@ -73,3 +73,4 @@ export default function CustomCursor() {
         </>
     );
 }
+

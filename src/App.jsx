@@ -1,15 +1,15 @@
 import './index.css';
-import CustomCursor from './components/CustomCursor';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Certificates from './components/Certificates';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import CustomCursor from './components/jsx/CustomCursor';
+import Navbar from './components/jsx/Navbar';
+import Hero from './components/jsx/Hero';
+import About from './components/jsx/About';
+import Services from './components/jsx/Services';
+import Experience from './components/jsx/Experience';
+import Education from './components/jsx/Education';
+import Certificates from './components/jsx/Certificates';
+import Projects from './components/jsx/Projects';
+import Contact from './components/jsx/Contact';
+import Footer from './components/jsx/Footer';
 
 function App() {
   return (

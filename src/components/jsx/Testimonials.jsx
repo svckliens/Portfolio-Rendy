@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import './Testimonials.css';
+import '../css/Testimonials.css';
 
 const testimonials = [
     {
@@ -103,3 +103,4 @@ export default function Testimonials() {
         </section>
     );
 }
+

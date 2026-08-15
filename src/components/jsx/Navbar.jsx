@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 import { HiSun, HiMoon, HiMenuAlt3, HiX } from 'react-icons/hi';
-import './Navbar.css';
+import '../css/Navbar.css';
 
 const navLinks = [
     { label: 'Home', href: '#home' },
@@ -111,3 +111,4 @@ export default function Navbar() {
         </nav>
     );
 }
+

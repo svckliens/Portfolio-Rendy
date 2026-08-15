@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { FiSend, FiMail, FiMapPin, FiPhone, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
-import './Contact.css';
+import '../css/Contact.css';
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -203,3 +203,4 @@ export default function Contact() {
         </section>
     );
 }
+

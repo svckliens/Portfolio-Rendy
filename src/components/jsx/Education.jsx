@@ -1,6 +1,6 @@
-import { useScrollReveal, useMultiScrollReveal } from '../hooks/useScrollReveal';
+import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiAward, FiBookOpen, FiCalendar, FiMapPin, FiCheckCircle } from 'react-icons/fi';
-import './Education.css';
+import '../css/Education.css';
 
 const educationList = [
     {
@@ -93,3 +93,4 @@ export default function Education() {
         </section>
     );
 }
+
