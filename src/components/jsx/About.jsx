@@ -60,7 +60,7 @@ export default function About() {
             <div className="container">
                 <div className="section-header reveal" ref={headerRef}>
                     <span className="section-label">About Me</span>
-                    <h2 className="section-title">My Technical Focus</h2>
+                    <h3 className="section-title">My Technical Focus</h3>
                     <p className="section-subtitle">
                         Get to know my technical background, core skill set, and software engineering philosophy
                     </p>

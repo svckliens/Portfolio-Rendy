@@ -14,27 +14,27 @@ const services = [
         title: 'Fullstack Web Development',
         subtitle: 'Scalable & Modern Web Solutions',
         description:
-            'Building high-performance, responsive, and aesthetic web applications tailored to user needs using React, Laravel, and modern JavaScript ecosystem.',
+            'Building high-performance, responsive, and aesthetic web applications tailored to user needs using various modern frameworks and technologies',
         highlights: [
             'Custom Single-Page & Multi-Page Apps',
-            'RESTful API & Database Architecture',
+            'Restful API & Database Architecture',
             'Sleek UI/UX with Clean Animations',
             'Performance & SEO Optimization',
         ],
-        badge: 'Web Tech',
+        badge: 'Web Dev',
     },
     {
         id: 'data-ai',
         icon: <FiBarChart2 />,
-        title: 'Data Analytics & AI / ML',
+        title: 'Data Analytics & AI / Machine Learning',
         subtitle: 'Data-Driven Insights & Intelligence',
         description:
             'Extracting meaningful insights from complex datasets, building predictive Machine Learning models, and creating interactive data visualization tools.',
         highlights: [
-            'Exploratory Data Analysis (EDA)',
+            'Data Analysis',
             'Machine Learning & Deep Learning Models',
             'Data Cleaning, Preprocessing & Wrangling',
-            'Interactive Dashboards & Reports',
+            'Data Visualization',
         ],
         badge: 'AI & Data',
     },
@@ -65,10 +65,10 @@ export default function Services() {
         <section id="services" className="section services">
             <div className="container">
                 <div className="section-header reveal" ref={headerRef}>
-                    <span className="section-label">What I Offer</span>
-                    <h2 className="section-title">Specialized Services</h2>
+                    <span className="section-label">Services</span>
+                    <h2 className="section-title">What I Offer</h2>
                     <p className="section-subtitle">
-                        Delivering end-to-end digital expertise spanning software development, data intelligence, and technical leadership
+                        Delivering end-to-end digital expertise spanning software development and data intelligence
                     </p>
                 </div>
 

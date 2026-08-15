@@ -168,8 +168,8 @@
 .services__tech-pill {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 24px;
+    gap: 8px;
+    padding: 8px 16px;
     border-radius: var(--radius-full);
     border: 1px solid var(--border-glass);
     background: var(--bg-glass);
@@ -186,14 +186,14 @@
 }
 
 .services__tech-pill-icon {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     display: flex;
     align-items: center;
     filter: drop-shadow(0 0 6px currentColor);
 }
 
 .services__tech-pill-name {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-primary);
 }
