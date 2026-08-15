@@ -4,6 +4,7 @@ import {
     SiReact, SiJavascript, SiNodedotjs, SiPython,
     SiHtml5, SiPhp, SiMongodb, SiMysql,
     SiGit, SiFigma, SiCanva, SiLaravel,
+    SiClaude,
 } from 'react-icons/si';
 import '../css/Services.css';
 
