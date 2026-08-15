@@ -33,14 +33,42 @@ export default function Navbar() {
                 }
             }
         };
-        window.addEventListener('scroll', handleScroll);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Prevent background scrolling on mobile when navigation menu is open
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [mobileOpen]);
+
+    // Close mobile menu on screen resize to desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 900) {
+                setMobileOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const handleNavClick = (e, href) => {
         e.preventDefault();
         setMobileOpen(false);
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        
+        // Wait slightly for menu closing animation before scrolling to prevent layout lag
+        setTimeout(() => {
+            document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
     };
 
     return (
