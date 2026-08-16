@@ -48,6 +48,8 @@ const projects = [
         tags: ['Python', 'Information Retrieval', 'Machine Learning', 'Natural Language Processing', 'Streamlit'],
         image: '/search-engine-ai.png',
         color: '#4f46e5',
+        github: 'https://github.com/svckliens/Search-Engine-AI-for-Campus',
+        demo: 'https://search-engine-for-campus.streamlit.app/',
     },
     {
         title: 'Mendaki Puncak Sejaya Landing Page',
