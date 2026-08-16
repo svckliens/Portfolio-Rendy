@@ -42,6 +42,14 @@ const projects = [
         demo: 'https://numerical-root-calculator.vercel.app/',
     },
     {
+        title: 'SmartCampus AI Search Engine',
+        category: 'Data & AI',
+        description: 'An intelligent system based on Information Retrieval Systems (IRS) and Machine Learning to help the university community manage, search, classify, and analyze information within the university environment automatically and accurately.',
+        tags: ['Python', 'Information Retrieval', 'Machine Learning', 'Natural Language Processing', 'Streamlit'],
+        image: '/search-engine-ai.png',
+        color: '#4f46e5',
+    },
+    {
         title: 'Mendaki Puncak Sejaya Landing Page',
         category: 'Website',
         description: 'A modern landing page for CV Mendaki Puncak Sejaya.',
