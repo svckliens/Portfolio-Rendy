@@ -148,16 +148,17 @@
     .ai-hero-3d {
         width: 270px;
         height: 270px;
+        max-width: 100%;
     }
     .ai-hero-3d__badge--software {
-        top: 4px;
-        left: -8px;
+        top: 8px;
+        left: 0;
         font-size: 0.68rem;
         padding: 4px 10px;
     }
     .ai-hero-3d__badge--ai {
-        bottom: 4px;
-        right: -8px;
+        bottom: 8px;
+        right: 0;
         font-size: 0.68rem;
         padding: 4px 10px;
     }

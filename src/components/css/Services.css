@@ -116,15 +116,13 @@
 
 /* ===== Edge-to-Edge Full-Width Tech Marquee at Bottom ===== */
 .services__tech-marquee-container {
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     margin-top: 60px;
     padding-top: 40px;
     border-top: 1px solid var(--border-glass);
+    overflow: hidden;
 }
 
 .services__tech-marquee-header {
