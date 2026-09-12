@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiGithub, FiExternalLink, FiX } from 'react-icons/fi';
+import TiltCard from './TiltCard';
 import '../css/Projects.css';
 
 const projects = [
@@ -111,11 +112,13 @@ export default function Projects() {
 
                 <div className="projects__grid">
                     {filtered.map((project, index) => (
-                        <div
+                        <TiltCard
                             key={project.title}
                             className="projects__card glass-card reveal"
                             ref={setRef(index)}
                             onClick={() => setSelectedProject(project)}
+                            maxTilt={7}
+                            scale={1.02}
                         >
                             <div className="projects__card-image" style={{ background: `linear-gradient(135deg, ${project.color}22, ${project.color}44)` }}>
                                 {project.image.includes('.') ? (
@@ -149,7 +152,7 @@ export default function Projects() {
                                     )}
                                 </div>
                             </div>
-                        </div>
+                        </TiltCard>
                     ))}
                 </div>
 

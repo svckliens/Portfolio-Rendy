@@ -3,50 +3,59 @@ import {
     SiReact, SiJavascript, SiNodedotjs, SiPython,
     SiHtml5, SiPhp, SiMongodb, SiMysql,
     SiGit, SiFigma, SiCanva, SiLaravel,
+    SiPytorch, SiScikitlearn, SiOpencv, SiHuggingface, SiStreamlit, SiPandas, SiDocker, SiTailwindcss
 } from 'react-icons/si';
+import TiltCard from './TiltCard';
 import '../css/Skills.css';
 
 const allSkills = [
+    { name: 'Python', icon: <SiPython />, color: '#3776AB' },
+    { name: 'PyTorch', icon: <SiPytorch />, color: '#EE4C2C' },
+    { name: 'Scikit-Learn', icon: <SiScikitlearn />, color: '#F7931E' },
+    { name: 'OpenCV', icon: <SiOpencv />, color: '#5C3EE8' },
+    { name: 'Hugging Face', icon: <SiHuggingface />, color: '#FFD21E' },
+    { name: 'Streamlit', icon: <SiStreamlit />, color: '#FF4B4B' },
+    { name: 'Pandas', icon: <SiPandas />, color: '#150458' },
     { name: 'React', icon: <SiReact />, color: '#61DAFB' },
     { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
-    { name: 'HTML5', icon: <SiHtml5 />, color: '#E34F26' },
-    { name: 'PHP', icon: <SiPhp />, color: '#777BB4' },
-    { name: 'Laravel', icon: <SiLaravel />, color: '#FF2D20' },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#06B6D4' },
     { name: 'Node.js', icon: <SiNodedotjs />, color: '#339933' },
-    { name: 'Python', icon: <SiPython />, color: '#3776AB' },
-    { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
     { name: 'SQL', icon: <SiMysql />, color: '#4479A1' },
+    { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
+    { name: 'Docker', icon: <SiDocker />, color: '#2496ED' },
     { name: 'Git', icon: <SiGit />, color: '#F05032' },
-    { name: 'Figma', icon: <SiFigma />, color: '#F24E1E' },
-    { name: 'Canva', icon: <SiCanva />, color: '#00C4CC' },
 ];
 
 const skillCategories = [
     {
-        title: 'Frontend Development',
+        title: 'Artificial Intelligence & Data',
         skills: [
-            { name: 'React', icon: <SiReact />, level: 70, color: '#61DAFB' },
-            { name: 'JavaScript', icon: <SiJavascript />, level: 80, color: '#F7DF1E' },
-            { name: 'HTML5', icon: <SiHtml5 />, level: 95, color: '#E34F26' },
-            { name: 'PHP', icon: <SiPhp />, level: 75, color: '#777BB4' },
-            { name: 'Laravel', icon: <SiLaravel />, level: 75, color: '#FF2D20' },
+            { name: 'Python', icon: <SiPython />, level: 90, color: '#3776AB' },
+            { name: 'PyTorch', icon: <SiPytorch />, level: 85, color: '#EE4C2C' },
+            { name: 'Machine Learning', icon: <SiScikitlearn />, level: 85, color: '#F7931E' },
+            { name: 'Computer Vision / OpenCV', icon: <SiOpencv />, level: 80, color: '#5C3EE8' },
+            { name: 'Hugging Face / LLMs', icon: <SiHuggingface />, level: 75, color: '#FFD21E' },
+            { name: 'Streamlit & Pandas', icon: <SiStreamlit />, level: 85, color: '#FF4B4B' },
         ],
     },
     {
-        title: 'Backend & Database',
+        title: 'Fullstack Software Engineering',
         skills: [
-            { name: 'Node.js', icon: <SiNodedotjs />, level: 30, color: '#339933' },
-            { name: 'Python', icon: <SiPython />, level: 70, color: '#3776AB' },
-            { name: 'MongoDB', icon: <SiMongodb />, level: 60, color: '#47A248' },
-            { name: 'SQL', icon: <SiMysql />, level: 80, color: '#4479A1' },
+            { name: 'React', icon: <SiReact />, level: 85, color: '#61DAFB' },
+            { name: 'JavaScript / ES6+', icon: <SiJavascript />, level: 85, color: '#F7DF1E' },
+            { name: 'Tailwind & Modern CSS', icon: <SiTailwindcss />, level: 90, color: '#06B6D4' },
+            { name: 'Node.js', icon: <SiNodedotjs />, level: 70, color: '#339933' },
+            { name: 'SQL / Databases', icon: <SiMysql />, level: 80, color: '#4479A1' },
+            { name: 'MongoDB', icon: <SiMongodb />, level: 75, color: '#47A248' },
         ],
     },
     {
-        title: 'Tools & Design',
+        title: 'DevOps, Tools & Architecture',
         skills: [
-            { name: 'Git', icon: <SiGit />, level: 70, color: '#F05032' },
-            { name: 'Figma', icon: <SiFigma />, level: 50, color: '#F24E1E' },
-            { name: 'Canva', icon: <SiCanva />, level: 50, color: '#00C4CC' },
+            { name: 'Git & GitHub', icon: <SiGit />, level: 85, color: '#F05032' },
+            { name: 'Docker', icon: <SiDocker />, level: 70, color: '#2496ED' },
+            { name: 'PHP / Laravel', icon: <SiLaravel />, level: 75, color: '#FF2D20' },
+            { name: 'Figma UI/UX', icon: <SiFigma />, level: 70, color: '#F24E1E' },
         ],
     },
 ];
@@ -91,7 +100,7 @@ export default function Skills() {
                             <h3 className="skills__category-title">{category.title}</h3>
                             <div className="skills__grid">
                                 {category.skills.map((skill) => (
-                                    <div key={skill.name} className="skills__card glass-card">
+                                    <TiltCard key={skill.name} className="skills__card glass-card" maxTilt={6} scale={1.03}>
                                         <div className="skills__card-header">
                                             <div className="skills__icon" style={{ color: skill.color }}>
                                                 {skill.icon}
@@ -108,7 +117,7 @@ export default function Skills() {
                                                 }}
                                             />
                                         </div>
-                                    </div>
+                                    </TiltCard>
                                 ))}
                             </div>
                         </div>

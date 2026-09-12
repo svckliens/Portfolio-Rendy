@@ -8,26 +8,37 @@
 
 .certificates__filter-btn {
     padding: 10px 22px;
-    border-radius: 30px;
+    border-radius: var(--radius-full);
     background: var(--bg-glass);
     border: 1px solid var(--border-glass);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), 0 2px 8px rgba(0, 0, 0, 0.1);
     color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .certificates__filter-btn:hover {
     border-color: var(--accent-primary);
     color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 6px 20px rgba(124, 106, 239, 0.2);
+}
+
+.certificates__filter-btn:active {
+    transform: scale(0.95);
 }
 
 .certificates__filter-btn.active {
-    background: var(--accent-gradient);
+    background: linear-gradient(135deg, rgba(124, 106, 239, 0.95), rgba(167, 139, 250, 0.9), rgba(244, 114, 182, 0.95));
     color: #fff;
-    border-color: transparent;
-    box-shadow: var(--shadow-glow);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.6),
+        0 4px 20px rgba(124, 106, 239, 0.45);
 }
 
 .certificates__grid {

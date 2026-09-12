@@ -1,5 +1,6 @@
 import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiAward, FiBookOpen, FiCalendar, FiMapPin, FiCheckCircle } from 'react-icons/fi';
+import TiltCard from './TiltCard';
 import '../css/Education.css';
 
 const educationList = [
@@ -54,10 +55,12 @@ export default function Education() {
 
                 <div className="education__grid">
                     {educationList.map((edu, index) => (
-                        <div
+                        <TiltCard
                             key={index}
                             className="education__card glass-card reveal"
                             ref={setEduRef(index)}
+                            maxTilt={6}
+                            scale={1.015}
                         >
                             <div className="education__top">
                                 <div className="education__icon">{edu.icon}</div>
@@ -86,7 +89,7 @@ export default function Education() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </TiltCard>
                     ))}
                 </div>
             </div>

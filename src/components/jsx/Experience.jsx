@@ -1,6 +1,7 @@
 import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiBriefcase, FiUsers, FiAward, FiGlobe, FiImage } from 'react-icons/fi';
 import { useEffect, useState, useRef } from 'react';
+import TiltCard from './TiltCard';
 import '../css/Experience.css';
 
 const experiences = [
@@ -118,7 +119,7 @@ export default function Experience() {
                             }}>
                                 {exp.icon}
                             </div>
-                            <div className="experience__card glass-card">
+                            <TiltCard className="experience__card glass-card" maxTilt={5} scale={1.015}>
                                 <div className="experience__period">{exp.period}</div>
                                 <h3 className="experience__title">{exp.title}</h3>
                                 <div className="experience__company">{exp.company}</div>
@@ -158,7 +159,7 @@ export default function Experience() {
                                         <span key={tag} className="experience__tag">{tag}</span>
                                     ))}
                                 </div>
-                            </div>
+                            </TiltCard>
                         </div>
                     ))}
                 </div>

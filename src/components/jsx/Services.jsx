@@ -1,10 +1,12 @@
 import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
-import { FiCode, FiBarChart2, FiUsers, FiCheckCircle } from 'react-icons/fi';
+import { FiCode, FiBarChart2, FiCheckCircle } from 'react-icons/fi';
 import {
     SiReact, SiJavascript, SiNodedotjs, SiPython,
-    SiHtml5, SiPhp, SiMongodb, SiMysql,
-    SiGit, SiFigma, SiCanva, SiLaravel,
+    SiMongodb, SiMysql, SiGit, SiFigma, SiLaravel,
+    SiPytorch, SiScikitlearn, SiOpencv, SiHuggingface,
+    SiStreamlit, SiPandas, SiDocker, SiTailwindcss, SiNextdotjs
 } from 'react-icons/si';
+import TiltCard from './TiltCard';
 import '../css/Services.css';
 
 const services = [
@@ -40,26 +42,38 @@ const services = [
     },
 ];
 
-const techSkills = [
-    { name: 'React', icon: <SiReact />, color: '#61DAFB' },
-    { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
-    { name: 'HTML5', icon: <SiHtml5 />, color: '#E34F26' },
-    { name: 'PHP', icon: <SiPhp />, color: '#777BB4' },
-    { name: 'Laravel', icon: <SiLaravel />, color: '#FF2D20' },
-    { name: 'Node.js', icon: <SiNodedotjs />, color: '#339933' },
+// Lane 1: AI & Data Science Stack
+const aiTechSkills = [
     { name: 'Python', icon: <SiPython />, color: '#3776AB' },
-    { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
+    { name: 'PyTorch', icon: <SiPytorch />, color: '#EE4C2C' },
+    { name: 'Scikit-Learn', icon: <SiScikitlearn />, color: '#F7931E' },
+    { name: 'OpenCV', icon: <SiOpencv />, color: '#5C3EE8' },
+    { name: 'Hugging Face', icon: <SiHuggingface />, color: '#FFD21E' },
+    { name: 'Streamlit', icon: <SiStreamlit />, color: '#FF4B4B' },
+    { name: 'Pandas', icon: <SiPandas />, color: '#150458' },
+];
+
+// Lane 2: Fullstack & DevOps Stack
+const devTechSkills = [
+    { name: 'React', icon: <SiReact />, color: '#61DAFB' },
+    { name: 'Next.js', icon: <SiNextdotjs />, color: '#ffffff' },
+    { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#06B6D4' },
+    { name: 'Node.js', icon: <SiNodedotjs />, color: '#339933' },
     { name: 'SQL', icon: <SiMysql />, color: '#4479A1' },
+    { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
+    { name: 'Docker', icon: <SiDocker />, color: '#2496ED' },
     { name: 'Git', icon: <SiGit />, color: '#F05032' },
+    { name: 'Laravel', icon: <SiLaravel />, color: '#FF2D20' },
     { name: 'Figma', icon: <SiFigma />, color: '#F24E1E' },
-    { name: 'Canva', icon: <SiCanva />, color: '#00C4CC' },
 ];
 
 export default function Services() {
     const headerRef = useScrollReveal();
     const setCardRef = useMultiScrollReveal(services.length);
 
-    const marqueeSkills = [...techSkills, ...techSkills, ...techSkills];
+    const marqueeAiSkills = [...aiTechSkills, ...aiTechSkills, ...aiTechSkills];
+    const marqueeDevSkills = [...devTechSkills, ...devTechSkills, ...devTechSkills];
 
     return (
         <section id="services" className="section services">
@@ -74,10 +88,12 @@ export default function Services() {
 
                 <div className="services__grid">
                     {services.map((service, index) => (
-                        <div
+                        <TiltCard
                             key={service.id}
                             className="services__card glass-card reveal"
                             ref={setCardRef(index)}
+                            maxTilt={7}
+                            scale={1.02}
                         >
                             <div className="services__card-header">
                                 <div className="services__icon-wrapper">{service.icon}</div>
@@ -98,7 +114,7 @@ export default function Services() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </TiltCard>
                     ))}
                 </div>
             </div>
@@ -108,11 +124,29 @@ export default function Services() {
                 <div className="services__tech-marquee-header">
                     <span className="services__tech-marquee-title">Technologies & Tools I Work With</span>
                 </div>
+
+                {/* Lane 1: AI & Data Science Stack */}
                 <div className="services__tech-marquee-wrapper">
                     <div className="services__tech-marquee-fade services__tech-marquee-fade--left" />
                     <div className="services__tech-marquee-track">
-                        {marqueeSkills.map((skill, idx) => (
-                            <div key={idx} className="services__tech-pill glass-card">
+                        {marqueeAiSkills.map((skill, idx) => (
+                            <div key={`ai-${idx}`} className="services__tech-pill glass-card">
+                                <span className="services__tech-pill-icon" style={{ color: skill.color }}>
+                                    {skill.icon}
+                                </span>
+                                <span className="services__tech-pill-name">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="services__tech-marquee-fade services__tech-marquee-fade--right" />
+                </div>
+
+                {/* Lane 2: Fullstack Software & DevOps Stack (Reverse Direction) */}
+                <div className="services__tech-marquee-wrapper" style={{ marginTop: '12px' }}>
+                    <div className="services__tech-marquee-fade services__tech-marquee-fade--left" />
+                    <div className="services__tech-marquee-track services__tech-marquee-track--reverse">
+                        {marqueeDevSkills.map((skill, idx) => (
+                            <div key={`dev-${idx}`} className="services__tech-pill glass-card">
                                 <span className="services__tech-pill-icon" style={{ color: skill.color }}>
                                     {skill.icon}
                                 </span>

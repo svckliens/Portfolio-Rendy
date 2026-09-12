@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useScrollReveal, useMultiScrollReveal } from '../../hooks/useScrollReveal';
 import { FiAward, FiExternalLink, FiX, FiCheckCircle, FiCalendar } from 'react-icons/fi';
+import TiltCard from './TiltCard';
 import '../css/Certificates.css';
 
 const certificatesData = [
@@ -115,10 +116,12 @@ export default function Certificates() {
                 {/* Grid */}
                 <div className="certificates__grid">
                     {filteredCerts.map((cert, index) => (
-                        <div
+                        <TiltCard
                             key={cert.id}
                             className="certificates__card glass-card reveal"
                             ref={setCertRef(index)}
+                            maxTilt={6}
+                            scale={1.02}
                         >
                             <div className="certificates__card-badge">
                                 <FiAward /> {cert.category}
@@ -179,7 +182,7 @@ export default function Certificates() {
                             >
                                 View Details & Certificate {cert.images && cert.images.length > 1 ? `(${cert.images.length})` : ''} <FiExternalLink />
                             </button>
-                        </div>
+                        </TiltCard>
                     ))}
                 </div>
             </div>

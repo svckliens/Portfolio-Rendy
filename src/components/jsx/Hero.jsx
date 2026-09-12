@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FiGithub, FiLinkedin, FiInstagram, FiDownload, FiArrowRight } from 'react-icons/fi';
+import AIHeroVisual3D from './AIHeroVisual3D';
 import '../css/Hero.css';
 
 const roles = ['Fullstack Web Developer', 'Data Analyst', 'AI Enthusiast', 'Leadership', 'Problem Solver'];
@@ -78,23 +79,33 @@ export default function Hero() {
                 </div>
 
                 <div className="hero__visual hero-animate hero-animate--delay">
-                    <div className="hero__avatar-wrapper">
-                        <div className="hero__avatar-ring" />
-                        <div className="hero__avatar">
-                            <img
-                                src="/photo.jpg"
-                                alt="Rendy Setyawan"
-                                className="hero__avatar-img"
-                                onError={(e) => {
-                                    e.target.style.display = 'none';
-                                    e.target.nextElementSibling.style.display = 'flex';
-                                }}
-                            />
-                            <div className="hero__avatar-placeholder" style={{ display: 'none' }}>
-                                <span>YN</span>
+                    <AIHeroVisual3D>
+                        <div className="hero__avatar-wrapper">
+                            <div className="hero__avatar-ring" />
+                            <div className="hero__avatar">
+                                <img
+                                    src="/photo.jpg"
+                                    alt="Rendy Setyawan"
+                                    className="hero__avatar-img"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextElementSibling.style.display = 'flex';
+                                    }}
+                                />
+                                <div className="hero__avatar-placeholder" style={{ display: 'none' }}>
+                                    <span>RS</span>
+                                </div>
+                            </div>
+                            <div className="ai-hero-3d__badge ai-hero-3d__badge--software">
+                                <span className="ai-hero-3d__badge-dot ai-hero-3d__badge-dot--violet" />
+                                <span>Software Engineer</span>
+                            </div>
+                            <div className="ai-hero-3d__badge ai-hero-3d__badge--ai">
+                                <span className="ai-hero-3d__badge-dot ai-hero-3d__badge-dot--cyan" />
+                                <span>AI Engineer</span>
                             </div>
                         </div>
-                    </div>
+                    </AIHeroVisual3D>
                 </div>
             </div>
 

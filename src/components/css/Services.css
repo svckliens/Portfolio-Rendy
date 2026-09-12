@@ -156,6 +156,10 @@
     animation: services-marquee-scroll 35s linear infinite;
 }
 
+.services__tech-marquee-track--reverse {
+    animation: services-marquee-scroll-reverse 38s linear infinite;
+}
+
 .services__tech-marquee-wrapper:hover .services__tech-marquee-track {
     animation-play-state: paused;
 }
@@ -166,6 +170,15 @@
     }
     100% {
         transform: translateX(calc(-100% / 3));
+    }
+}
+
+@keyframes services-marquee-scroll-reverse {
+    0% {
+        transform: translateX(calc(-100% / 3));
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
