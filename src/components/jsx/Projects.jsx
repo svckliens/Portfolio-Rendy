@@ -6,6 +6,15 @@ import '../css/Projects.css';
 
 const projects = [
     {
+        title: 'Indonesian ASR Benchmark (Whisper vs Wav2Vec2)',
+        category: 'Data & AI',
+        description: 'Interactive Automatic Speech Recognition (ASR) benchmarking platform comparing Whisper and Wav2Vec2 on Indonesian speech audio with real-time transcription and Word Error Rate (WER) evaluation.',
+        tags: ['Speech Recognition', 'Whisper', 'Wav2Vec2', 'Hugging Face', 'PyTorch', 'Python'],
+        image: '/ASR.png',
+        color: '#ff9f43',
+        demo: 'https://huggingface.co/spaces/svckliens/indonesian-asr-benchmark',
+    },
+    {
         title: 'Kolaborasa Muda Website',
         category: 'Website',
         description: 'A digital platform for PT. Kolaborasa Muda Indonesia.',
