@@ -60,7 +60,7 @@ export default function Hero() {
                         <a href="#contact" className="btn btn-primary">
                             Let's Talk <FiArrowRight />
                         </a>
-                        <a href="cv-rendy.pdf" download className="btn btn-outline">
+                        <a href="/cv-rendy-new.pdf" download="CV_Rendy_Setyawan.pdf" className="btn btn-outline">
                             <FiDownload /> Download CV
                         </a>
                     </div>
